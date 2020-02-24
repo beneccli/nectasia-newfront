@@ -8,9 +8,16 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "autoprefixer": "^9.7.4",
     "next": "latest",
+    "postcss-import": "^12.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-markdown": "^4.0.6"
+    "react-markdown": "^4.0.6",
+    "styled-jsx-plugin-postcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^1.2.0"
   }
 }
