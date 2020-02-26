@@ -1,6 +1,23 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '2/3': '66.666667%'
+      },
+      boxShadow: {
+        'outline-gray': '0 0 0 3px #f7fafc',
+        'outline-white': '0 0 0 12px white'
+      },
+      backgroundColor: theme => ({
+       'black-transparent-1/2': 'rgba(0, 0, 0, .5)',
+       'black-transparent-3/5': 'rgba(0, 0, 0, .6)'
+      }),
+      width: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem'
+      }
+    },
     container: {
       center: true
     }
