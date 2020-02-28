@@ -49,9 +49,9 @@ const CategoryCard = ({ category, className }) => (
 
 export default function RecipeCategories() {
   return (
-    <section className="container">
+    <section>
       <h2 className="ml-6 my-8 text-3xl font-thin">Découvrir les cuisines du monde</h2>
-      <div className="px-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="px-3 grid grid-cols-2 md:grid-cols-3">
         {recipeCategories.map((category, key) => <CategoryCard category={category}></CategoryCard>)}
       </div>
     </section>

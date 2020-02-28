@@ -4,13 +4,15 @@ const contentStyle = {
   paddingTop: 50
 }
 
-export default function Layout(props) {
-  return (
-    <div>
-      <Header />
-      <div style={contentStyle}>
-        {props.children}
-      </div>
+const MainLayout = ({ children }) => (
+  <div>
+    <Header />
+    <div style={contentStyle}>
+      {children}
     </div>
-  )
-}
+  </div>
+)
+
+export const getLayout = page => <MainLayout>{page}</MainLayout>
+
+export default MainLayout

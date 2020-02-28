@@ -25,6 +25,8 @@ module.exports = {
   variants: {
     borderWidth: ['responsive', 'hover'],
     borderColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    opacity: ['responsive', 'hover', 'focus', 'group-hover']
   },
   plugins: [
   ],

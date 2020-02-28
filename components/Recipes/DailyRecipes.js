@@ -37,7 +37,7 @@ const dailyRecipeHiddenPolicy = (key) => (key == 2) ? 'hidden md:flex' : (key ==
 
 const RecipeCard = ({ recipe, className }) => (
   <Link href="#">
-    <div className={`mx-3 flex flex-col rounded cursor-pointer transition duration-200 shadow-outline-white hover:bg-gray-100 hover:shadow-outline-gray ${className}`}>
+    <div className={`mx-3 mb-6 flex flex-col rounded cursor-pointer transition duration-200 shadow-outline-white hover:bg-gray-100 hover:shadow-outline-gray ${className}`}>
       <div className="relative pb-2/3">
         <img src={recipe.picture} className="absolute w-full h-full object-cover rounded-md" />
       </div>
@@ -56,12 +56,12 @@ const RecipeCard = ({ recipe, className }) => (
 
 export default function DailyRecipes({ title }) {
   return (
-    <section className="container">
+    <section>
       <div className="flex">
         <h2 className="flex-1 ml-6 my-8 text-3xl font-thin">{title}</h2>
-        <a href="#" className="flex-1 mt-12 mr-6 text-right">Parcourir</a>
+        <a href="#" className="mt-12 mr-6 text-right">Parcourir</a>
       </div>
-      <div className="px-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="px-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {dailyRecipes.map((recipe, key) => <RecipeCard recipe={recipe} className={dailyRecipeHiddenPolicy(key)}></RecipeCard>)}
       </div>
     </section>
