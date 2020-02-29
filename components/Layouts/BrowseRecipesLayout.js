@@ -2,8 +2,8 @@ import { getLayout as getSiteLayout } from './MainLayout'
 import Link from '../../components/Link'
 
 const RecipesNavigation = () => (
-  <div className="w-64">
-    <div className="fixed w-64 bottom-0 py-6 px-6 border-r border-gray-300" style={{top: 53}}>
+  <div className="w-64 hidden md:block">
+    <div className="fixed w-64 bottom-0 py-6 px-6" style={{top: 53}}>
       <button className="btn btn-primary mb-6 w-full">Créer une recette</button>
       <h3 className="mb-4 font-bold uppercase">Catégories</h3>
       <ul>

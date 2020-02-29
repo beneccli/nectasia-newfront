@@ -23,15 +23,15 @@ export default function Header() {
             <a className="linkStyle">Recettes</a>
           </Link>
           <Link href="/shop">
-            <a className="linkStyle">Magasin</a>
+            <a className="linkStyle! hidden">Magasin</a>
           </Link>
           <Link href="/about">
-            <a className="linkStyle text-gray-300"><FontAwesomeIcon icon={faShoppingCart} className="self-center" /></a>
+            <a className="linkStyle! hidden text-gray-300"><FontAwesomeIcon icon={faShoppingCart} className="self-center" /></a>
           </Link>
           <a className="linkStyle">
             <div className="flex">
-              <img src={userPicture} className="self-center rounded-full h-6 w-6 max-w-none" />
-              <span className="self-center mx-3">Ertza</span>
+              <img src={userPicture} className="mr-3 self-center rounded-full h-6 w-6 max-w-none" />
+              <span className="hidden self-center mx-3">Ertza</span>
               <FontAwesomeIcon icon={faChevronDown} className="self-center" />
             </div>
           </a>
