@@ -1,5 +1,5 @@
-import Layout from '../components/MainLayout'
-import { getLayout } from '../components/MainLayout'
+import Layout from '../components/Layouts/MainLayout'
+import { getLayout } from '../components/Layouts/MainLayout'
 import MultiDayPlanner from '../components/Planning/MultiDayPlanner'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight, faChevronDown, faCalendarAlt, faCog, faChartArea } from '@fortawesome/free-solid-svg-icons'

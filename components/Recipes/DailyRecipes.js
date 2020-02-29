@@ -36,21 +36,23 @@ const dailyRecipes = [
 const dailyRecipeHiddenPolicy = (key) => (key == 2) ? 'hidden md:flex' : (key == 3) ? 'hidden lg:flex' : '';
 
 const RecipeCard = ({ recipe, className }) => (
-  <Link href="#">
-    <div className={`mx-3 mb-6 flex flex-col rounded cursor-pointer transition duration-200 shadow-outline-white hover:bg-gray-100 hover:shadow-outline-gray ${className}`}>
-      <div className="relative pb-2/3">
-        <img src={recipe.picture} className="absolute w-full h-full object-cover rounded-md" />
-      </div>
-      <div className="px-3 pt-2 flex">
-        <div className="flex-1 self-center text-xs text-gray-500 uppercase">{recipe.category}</div>
-        <div className="flex-1 self-center text-right text-sm text-gray-500">
-          <FontAwesomeIcon icon={faThumbsUp} className="text-gray-400" />
-          <span className="pl-3">{recipe.likes}</span>
+  <Link href="/recipe/[slug]" as="/recipe/Slug-Test">
+    <a>
+      <div className={`mx-3 mb-6 flex flex-col rounded cursor-pointer transition duration-200 shadow-outline-white hover:bg-gray-100 hover:shadow-outline-gray ${className}`}>
+        <div className="relative pb-2/3">
+          <img src={recipe.picture} className="absolute w-full h-full object-cover rounded-md" />
         </div>
+        <div className="px-3 pt-2 flex">
+          <div className="flex-1 self-center text-xs text-gray-500 uppercase">{recipe.category}</div>
+          <div className="flex-1 self-center text-right text-sm text-gray-500">
+            <FontAwesomeIcon icon={faThumbsUp} className="text-gray-400" />
+            <span className="pl-3">{recipe.likes}</span>
+          </div>
+        </div>
+        <h3 className="px-3 mt-1 text-lg">{recipe.name}</h3>
+        <span className="px-3 pb-3 text-sm text-gray-400">Proposé par <a href="#" className="text-gray-500">{recipe.user.username}</a></span>
       </div>
-      <h3 className="px-3 mt-1 text-lg">{recipe.name}</h3>
-      <span className="px-3 pb-3 text-sm text-gray-400">Proposé par <a href="#" className="text-gray-500">{recipe.user.username}</a></span>
-    </div>
+    </a>
   </Link>
 );
 
@@ -62,7 +64,7 @@ export default function DailyRecipes({ title }) {
         <a href="#" className="mt-12 mr-6 text-right">Parcourir</a>
       </div>
       <div className="px-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {dailyRecipes.map((recipe, key) => <RecipeCard recipe={recipe} className={dailyRecipeHiddenPolicy(key)}></RecipeCard>)}
+        {dailyRecipes.map((recipe, key) => <RecipeCard recipe={recipe} className={dailyRecipeHiddenPolicy(key)} key={key}></RecipeCard>)}
       </div>
     </section>
   )

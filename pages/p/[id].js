@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Markdown from 'react-markdown'
-import Layout from '../../components/MainLayout'
+import Layout from '../../components/Layouts/MainLayout'
 
 export default () => {
   const router = useRouter()

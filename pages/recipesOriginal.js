@@ -1,5 +1,5 @@
-import Layout from '../components/MainLayout'
-import { getLayout } from '../components/MainLayout'
+import Layout from '../components/Layouts/MainLayout'
+import { getLayout } from '../components/Layouts/MainLayout'
 import DailyRecipes from '../components/Recipes/DailyRecipes'
 import RecipeCategories from '../components/Recipes/RecipeCategories'
 import Link from '../components/Link'

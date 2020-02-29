@@ -52,7 +52,7 @@ export default function RecipeCategories() {
     <section>
       <h2 className="ml-6 my-8 text-3xl font-thin">Découvrir les cuisines du monde</h2>
       <div className="px-3 grid grid-cols-2 md:grid-cols-3">
-        {recipeCategories.map((category, key) => <CategoryCard category={category}></CategoryCard>)}
+        {recipeCategories.map((category, key) => <CategoryCard category={category} key={key}></CategoryCard>)}
       </div>
     </section>
   )
