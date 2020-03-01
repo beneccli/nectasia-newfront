@@ -35,7 +35,7 @@ const RecipePresentation = () => (
   <section className="grid grid-cols-1 lg:grid-cols-2">
     <div className="order-2">
       <div className="mx-6 my-3">
-        <h1 className="text-3xl">Burger américain</h1>
+        <h1 className="text-3xl">PAGE ACCUEIL OBJECTIFS COMME EATTHISMUCH</h1>
         <div className="text-gray-400">Publié par <a href="#">Ertza</a></div>
       </div>
       <div className="mx-6 my-3 text-gray-700">

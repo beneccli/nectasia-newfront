@@ -1,4 +1,4 @@
-import Link from '../components/Link'
+import Link from '../Link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
@@ -11,7 +11,9 @@ export default function Header() {
   return (
     <div className="fixed bg-white z-50 w-full border-b border-gray-200">
       <div className="container mx-auto flex flex-row">
-        <h1 className="self-center px-6 my-2 text-2xl font-bold">NECTASIA</h1>
+        <Link href="/">
+          <h1 className="self-center px-6 my-2 text-2xl font-bold cursor-pointer">NECTASIA</h1>
+        </Link>
         <div className="w-full pr-6">
           <input className="w-full py-1 px-4 my-2 border border-gray-300 rounded outline-none placeholder-gray-500 font-thin focus:shadow-sm focus:border-gray-400" placeholder="Rechercher une recette..." />
         </div>
