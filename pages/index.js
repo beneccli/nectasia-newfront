@@ -32,7 +32,7 @@ export default function Blog() {
       <div className="bg-blue-400 h-screen w-screen" style={pictureArea}>
         <div className="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
 
-          <div className="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 bg-white sm:mx-0" style={{height: 550}}>
+          <div className="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 2xl:w-1/3 bg-white sm:mx-0" style={{height: 550}}>
             <div className="flex flex-col w-full p-4">
               <div className="flex flex-col flex-1 justify-center mb-8">
 
@@ -67,7 +67,7 @@ export default function Blog() {
                     <div className="flex flex-col mt-12">
                       <Link href="/planning">
                         <a className="bg-black hover:bg-blue-700 text-white text-md font-thin uppercase py-3 px-4 rounded text-center">
-                          Je veux un aperçu !
+                          Donne moi un aperçu !
                         </a>
                       </Link>
                     </div>
@@ -98,11 +98,11 @@ export default function Blog() {
         .dietBtn {
           @apply mx-1 px-5 py-2 rounded cursor-pointer
         }
-        .dietBtn.active {
-          @apply bg-black text-white
-        }
         .dietBtn:hover {
           @apply bg-gray-200
+        }
+        .dietBtn.active {
+          @apply bg-black text-white
         }
       `}</style>
     </div>

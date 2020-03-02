@@ -70,17 +70,17 @@ const FooterActions = () => (
           Pour cette semaine
         </div>
         <div className="flex-1">
-          <button class="btn btn-primary mr-6">
+          <button className="btn btn-primary mr-6">
             <FontAwesomeIcon icon={faBolt} />
             <span className="ml-3">Commander</span>
           </button>
-          <button class="btn btn-secondary">
+          <button className="btn btn-secondary">
             <FontAwesomeIcon icon={faChartBar} />
             <span className="ml-3">Statistiques</span>
           </button>
         </div>
         <div>
-          <button class="btn btn-secondary">Personnaliser</button>
+          <button className="btn btn-secondary">Personnaliser</button>
         </div>
       </div>
     </div>
