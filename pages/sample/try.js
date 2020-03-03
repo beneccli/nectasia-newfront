@@ -19,7 +19,7 @@ export default function SampleTry() {
       <div className="bg-blue-400 h-screen w-screen" style={pictureArea}>
         <div className="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
 
-          <div className="flex flex-col px-4 py-4 rounded-lg shadow-lg w-full sm:w-4/5 lg:w-3/4 2xl:w-1/2 bg-white sm:mx-0">
+          <div className="flex flex-col px-4 py-4 rounded-lg shadow-lg w-full sm:w-4/5 lg:w-3/4 xl:w-3/5 2xl:w-2/5 bg-white sm:mx-0">
             
             <Link href="/">
               <h1 className="self-center px-6 mb-6 text-3xl font-bold cursor-pointer">NECTASIA</h1>
@@ -39,7 +39,7 @@ export default function SampleTry() {
                   </Link>
               </div>
 
-              <div className="flex-1 flex flex-col ml-6">
+              <div className="flex flex-col ml-6 w-84">
                   <h2 className="mt-3 text-2xl font-thin text-center">Prêt à en découvrir plus ?</h2>
                   <Link href="/planning">
                     <a
