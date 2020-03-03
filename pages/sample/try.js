@@ -19,7 +19,10 @@ export default function SampleTry() {
       <div className="bg-blue-400 h-screen w-screen" style={pictureArea}>
         <div className="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
 
-          <div className="flex flex-col px-4 py-4 rounded-lg shadow-lg w-full sm:w-4/5 lg:w-3/4 xl:w-3/5 2xl:w-2/5 bg-white sm:mx-0">
+          <div
+            className="flex flex-col px-4 py-4 rounded-lg shadow-lg w-full sm:w-4/5 lg:w-3/4 xl:w-3/5 2xl:w-2/5 bg-white sm:mx-0"
+            style={{minWidth: 800}}
+          >
             
             <Link href="/">
               <h1 className="self-center px-6 mb-6 text-3xl font-bold cursor-pointer">NECTASIA</h1>
@@ -29,18 +32,29 @@ export default function SampleTry() {
 
               <div className="flex-1 flex flex-col mr-6">
                   <div className="w-full flex justify-center">
-                    <PlannedDayTry dayString="Aujourd'hui" dayNumber={(new Date()).getDay()} />
+                    <PlannedDayTry title="Lundi 2 Mars" />
                   </div>
                   <Link href="/planning">
                     <a className="mt-6 bg-black hover:bg-blue-700 text-white text-md font-thin uppercase py-3 px-4 rounded text-center">
                       <FontAwesomeIcon icon={faBolt} />
-                      <span className="ml-3">Commander</span>
+                      <span className="ml-3">Commander un 1 clic</span>
                     </a>
                   </Link>
               </div>
 
               <div className="flex flex-col ml-6 w-84">
-                  <h2 className="mt-3 text-2xl font-thin text-center">Prêt à en découvrir plus ?</h2>
+                  <h2 className="mb-3 text-2xl font-thin text-center">Entièrement personnalisable !</h2>
+                  <ul className="list-disc pl-4 font-thin">
+                    <li>Nombre de repas par jour</li>
+                    <li>Calories</li>
+                    <li>Macronutriments</li>
+                    <li>Allergies</li>
+                    <li>Type de régime</li>
+                    <li>Matériel de cuisine</li>
+                    <li>...Et bien plus encore !</li>
+                  </ul>
+                  {/* <h2 className="mt-3 text-2xl font-thin text-center">Prêt à en découvrir plus ?</h2> */}
+                  <h2 className="mt-3 text-2xl font-thin text-center">Prêt à tenter l'expérience ?</h2>
                   <Link href="/planning">
                     <a
                       className="mt-6 text-white text-md font-thin py-2 px-4 rounded text-center"
@@ -59,6 +73,7 @@ export default function SampleTry() {
                       <span className="ml-3">Continuer avec Google</span>
                     </a>
                   </Link>
+                  <span className="mt-3 text-xs text-center font-thin">(Utilisés pour créer un compte, aucune publication)</span>
                   <Link href="/planning">
                     <a className="mt-3 bg-gray-300 texft-white text-md font-thin py-2 px-4 rounded text-center">
                       <span className="ml-3">Continuer avec un email</span>

@@ -1,6 +1,6 @@
 import Link from '../Link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUtensils, faFire } from '@fortawesome/free-solid-svg-icons'
+import { faSyncAlt, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 const Dish = ({ dishName, dishPicture }) => (
   <div className="flex justify-center">
@@ -18,7 +18,12 @@ const Dish = ({ dishName, dishPicture }) => (
 
 const MealList = ({ mealName }) => (
   <div className="">
-    <h5 className="px-3 py-2 text-right text-sm font-bold uppercase bg-gray-100">{mealName}</h5>
+    <h5 className="text-right text-sm font-bold uppercase bg-gray-100">
+      <span className="px-1">{mealName}</span>
+      <button className="px-2 py-2 text-gray-500 hover:text-black">
+        <FontAwesomeIcon icon={faSyncAlt} />
+      </button>
+    </h5>
     <div className="flex flex-col px-3 mt-3">
       <Link href="/recipe/[slug]" as="/recipe/any">
         <a>
@@ -29,18 +34,35 @@ const MealList = ({ mealName }) => (
   </div>
 );
 
-// Make container of daycolumn width++, then overflow x auto of the container of the container (no mistake here)
-const PlannedDayTry = ({ dayString, dayNumber, className }) => {
+// const Statistiques = () => (
+//   <div className="border-b border-gray-300">
+//     <h5 className="text-center text-sm font-bold uppercase bg-white">
+//       <span className="px-1">1843 calories</span>
+//     </h5>
+//   </div>
+// );
 
-  let todayBg = (dayString === 'Aujourd\'hui') ? 'bg-orange-500' : 'bg-black';
+// Make container of daycolumn width++, then overflow x auto of the container of the container (no mistake here)
+const PlannedDayTry = ({ title, className }) => {
 
   return (
     <div className={`w-full ${className}`} style={{minWidth: 300}}>
-      <div className="px-3 pb-3 w-full text-right border-b border-gray-300">
-        <h4 className="text-sm leading-8 uppercase">{dayString}</h4>
-        <h4 className="text-5xl leading-10">{dayNumber}</h4>
+      <div className="flex items-center w-full border-b border-gray-300">
+        <h3 className="flex-1 px-3 font-thin">
+          1842 calories
+          <button className="px-2 py-2 text-gray-500 hover:text-black">
+            <FontAwesomeIcon icon={faInfoCircle} size="sm" />
+          </button>
+        </h3>
+        <h2 className="font-thin uppercase">
+          <span className="px-1">{title}</span>
+          <button className="px-2 py-2 text-gray-500 hover:text-black">
+            <FontAwesomeIcon icon={faSyncAlt} size="sm" />
+          </button>
+        </h2>
       </div>
       <div className="flex flex-col">
+        {/* <Statistiques /> */}
         <MealList mealName="Petit déjeuner" />
         <MealList mealName="Déjeuner" />
         <MealList mealName="Dîner" />

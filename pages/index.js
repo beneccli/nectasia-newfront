@@ -24,7 +24,10 @@ export default function Home() {
       <div className="bg-blue-400 h-screen w-screen" style={pictureArea}>
         <div className="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
 
-          <div className="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 2xl:w-1/3 bg-white sm:mx-0" style={{height: 575, minHeight: 575}}>
+          <div
+            className="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 2xl:w-1/3 bg-white sm:mx-0"
+            style={{height: 575, minHeight: 575, minWidth: 575}}
+          >
             <div className="flex flex-col w-full p-4">
               <div className="flex flex-col flex-1 justify-center mb-8">
 
