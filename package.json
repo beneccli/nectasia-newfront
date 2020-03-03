@@ -9,6 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/free-regular-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
@@ -22,6 +23,7 @@
     "styled-jsx-plugin-postcss": "^2.0.1"
   },
   "devDependencies": {
+    "babel-plugin-root-import": "^6.4.1",
     "tailwindcss": "^1.2.0"
   }
 }

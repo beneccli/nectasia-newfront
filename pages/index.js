@@ -2,14 +2,6 @@ import Link from '../components/Link'
 import HomeHeader from '../components/Headers/HomeHeader'
 import ListVerticalFading from '../components/Home/ListVerticalFading'
 
-const contentStyle = {
-  position: 'relative',
-  top: 53,
-  bottom: 0,
-  left: 0,
-  right: 0
-};
-
 const pictureArea = {
   background: "url('https://images.unsplash.com/photo-1515965885361-f1e0095517ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80')",
   backgroundSize: 'cover',
@@ -24,7 +16,7 @@ const pictureArea2 = {
 };
 
 
-export default function Blog() {
+export default function Home() {
   return (
     <div>
       {/* <HomeHeader /> */}
@@ -32,11 +24,11 @@ export default function Blog() {
       <div className="bg-blue-400 h-screen w-screen" style={pictureArea}>
         <div className="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
 
-          <div className="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 2xl:w-1/3 bg-white sm:mx-0" style={{height: 550}}>
+          <div className="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 2xl:w-1/3 bg-white sm:mx-0" style={{height: 575, minHeight: 575}}>
             <div className="flex flex-col w-full p-4">
               <div className="flex flex-col flex-1 justify-center mb-8">
 
-                <h1 className="self-center px-6 my-2 text-2xl font-bold cursor-pointer">NECTASIA</h1>
+                <h1 className="self-center px-6 my-2 text-3xl font-bold cursor-default">NECTASIA</h1>
 
                 <ListVerticalFading
                   list={[
@@ -58,14 +50,20 @@ export default function Blog() {
                       <span className="dietBtn">Végétalien</span>
                     </div>
 
-                    <div className="flex items-center mt-12">
-                      <label className="mr-6" htmlFor="calories">Je veux manger</label>
-                      <input id="calories" type="number" className="flex-grow h-10 px-2 border rounded border-grey-400" name="email" placeholder="1800" />
-                      <label className="ml-6" htmlFor="calories">calories</label>
+                    <div className="flex items-center mt-8">
+                      <label className="mr-6 w-32 text-right whitespace-no-wrap" htmlFor="calories">Je veux manger</label>
+                      <input id="calories" type="number" name="calories" placeholder="1800" min="1" max="99999" className="flex-grow h-10 px-3 border rounded border-grey-400" />
+                      <label className="ml-6 w-16" htmlFor="calories">calories</label>
                     </div>
 
-                    <div className="flex flex-col mt-12">
-                      <Link href="/planning">
+                    <div className="flex items-center mt-3">
+                      <label className="mr-6 w-32 text-right" htmlFor="meals">avec</label>
+                      <input id="meals" type="number" name="meals" placeholder="3" min="1" max="9" className="flex-grow h-10 px-3 border rounded border-grey-400" />
+                      <label className="ml-6 w-16" htmlFor="meals">repas</label>
+                    </div>
+
+                    <div className="flex flex-col mt-8">
+                      <Link href="/sample/try">
                         <a className="bg-black hover:bg-blue-700 text-white text-md font-thin uppercase py-3 px-4 rounded text-center">
                           Donne moi un aperçu !
                         </a>
