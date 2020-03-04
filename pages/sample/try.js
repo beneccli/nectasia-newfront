@@ -1,8 +1,9 @@
 import Link from '~/components/Link'
 import HomeHeader from '~/components/Headers/HomeHeader'
 import PlannedDayTry from '~/components/Planning/PlannedDayTry'
+import TryTutorial from '~/components/Home/TryTutorial'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBolt } from '@fortawesome/free-solid-svg-icons'
+import { faBolt, faSyncAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
 const pictureArea = {
@@ -43,7 +44,7 @@ export default function SampleTry() {
               </div>
 
               <div className="flex flex-col ml-6 w-84">
-                  <h2 className="mb-3 text-2xl font-thin text-center">Entièrement personnalisable !</h2>
+                  {/* <h2 className="mb-3 text-2xl font-thin text-center">Entièrement personnalisable !</h2>
                   <ul className="list-disc pl-4 font-thin">
                     <li>Nombre de repas par jour</li>
                     <li>Calories</li>
@@ -52,9 +53,13 @@ export default function SampleTry() {
                     <li>Type de régime</li>
                     <li>Matériel de cuisine</li>
                     <li>...Et bien plus encore !</li>
-                  </ul>
+                    {/* <li>Create like a bulle or animated thing... with "next" button link text</li> *}
+                  </ul> */}
+
+                  <TryTutorial />
+
                   {/* <h2 className="mt-3 text-2xl font-thin text-center">Prêt à en découvrir plus ?</h2> */}
-                  <h2 className="mt-3 text-2xl font-thin text-center">Prêt à tenter l'expérience ?</h2>
+                  <h2 className="mt-6 text-2xl font-thin text-center">Prêt à tenter l'expérience ?</h2>
                   <Link href="/planning">
                     <a
                       className="mt-6 text-white text-md font-thin py-2 px-4 rounded text-center"
