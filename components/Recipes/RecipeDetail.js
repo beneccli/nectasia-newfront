@@ -3,8 +3,11 @@ import { faUtensilSpoon, faThumbtack } from '@fortawesome/free-solid-svg-icons'
 import { faThumbsUp, faThumbsDown, faComments } from '@fortawesome/free-regular-svg-icons'
 import Link from '../Link'
 
-const picture = 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80';
-const picTomato = 'https://media.istockphoto.com/photos/tomato-isolated-on-white-background-picture-id466175630?k=6&m=466175630&s=612x612&w=0&h=fu_mQBjGJZIliOWwCR0Vf2myRvKWyQDsymxEIi8tZ38=';
+// const picture = 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80';
+// const picTomato = 'https://media.istockphoto.com/photos/tomato-isolated-on-white-background-picture-id466175630?k=6&m=466175630&s=612x612&w=0&h=fu_mQBjGJZIliOWwCR0Vf2myRvKWyQDsymxEIi8tZ38=';
+
+const picture = '/recipes/1.png';
+const picTomato = '/recipes/2.png';
 
 const RecipeData = () => (
   <div>
@@ -35,7 +38,7 @@ const RecipePresentation = () => (
   <section className="grid grid-cols-1 lg:grid-cols-2">
     <div className="order-2">
       <div className="mx-6 my-3">
-        <h1 className="text-3xl">PAGE ACCUEIL OBJECTIFS COMME EATTHISMUCH</h1>
+        <h1 className="text-3xl">Burger américain</h1>
         <div className="text-gray-400">Publié par <a href="#">Ertza</a></div>
       </div>
       <div className="mx-6 my-3 text-gray-700">

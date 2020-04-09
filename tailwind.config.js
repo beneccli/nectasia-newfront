@@ -25,15 +25,16 @@ module.exports = {
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1600px'
+      'xl': '1280px'
+      // '2xl': '1600px'
     }
   },
   variants: {
     borderWidth: ['responsive', 'hover'],
     borderColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    opacity: ['responsive', 'hover', 'focus', 'group-hover']
+    opacity: ['responsive', 'hover', 'focus', 'group-hover'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover']
   },
   plugins: [
   ],

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Salade nipponne",
+    "mealType": "Petit déjéuner",
+    "picture": "/recipes/3.jpg",
+    "likes": 43,
+    "user": 0
+  },
+  {
+    "name": "Pizza kiffatoire",
+    "mealType": "Déjeuner",
+    "picture": "/recipes/11.jpg",
+    "likes": 20,
+    "user": 0
+  },
+  {
+    "name": "Salade ceasar",
+    "mealType": "Dîner",
+    "picture": "/recipes/2.jpg",
+    "likes": 7,
+    "user": 1
+  }
+]

@@ -8,29 +8,28 @@ const user_2 = { username: 'Martin', picture: 'https://images.unsplash.com/photo
 const recipeCategories = [
   {
     name: 'burger',
-    picture: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
+    picture: '/recipes/9.jpg',
   }, {
     name: 'dessert',
-    picture: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+    picture: '/recipes/8.jpg',
   }, {
     name: 'salade',
-    picture: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80',
+    picture: '/recipes/6.jpg',
   }, {
     name: 'italien',
-    picture: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-  },
-  {
+    picture: '/recipes/11.jpg',
+  }, {
     name: 'Libanais',
-    picture: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
+    picture: '/recipes/4.jpg',
   }, {
     name: 'Japonais',
-    picture: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+    picture: '/recipes/5.jpg',
   }, {
     name: 'Coréen',
-    picture: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80',
+    picture: '/recipes/7.jpg',
   }, {
     name: 'Chinois',
-    picture: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    picture: '/recipes/2.jpg',
   }
 ];
 

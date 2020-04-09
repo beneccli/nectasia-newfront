@@ -5,9 +5,12 @@ import Link from '../components/Link'
 
 const Recipes = () => (
   <div>
+    <div className="bg-black w-full h-64 rounded">
+      Hello
+    </div>
     <DailyRecipes title="Recommandées par la communauté" />
-    <DailyRecipes title="Dernières recettes ajoutées" />
-    <RecipeCategories />
+    {/* <DailyRecipes title="Dernières recettes ajoutées" />
+    <RecipeCategories /> */}
   </div>
 )
 

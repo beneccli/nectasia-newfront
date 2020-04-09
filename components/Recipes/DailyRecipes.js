@@ -9,25 +9,25 @@ const dailyRecipes = [
   {
     name: 'Burger américain',
     category: 'burger',
-    picture: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
+    picture: '/recipes/9.jpg',
     likes: 13,
     user: user_1
   }, {
     name: 'Salade ceasar',
     category: 'dessert',
-    picture: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+    picture: '/recipes/2.jpg',
     likes: 7,
     user: user_1
   }, {
     name: 'Salade nipponne',
     category: 'salad',
-    picture: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80',
+    picture: '/recipes/3.jpg',
     likes: 43,
     user: user_2
   }, {
     name: 'Pizza kiffatoire',
     category: 'italian',
-    picture: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    picture: '/recipes/11.jpg',
     likes: 20,
     user: user_1
   }
@@ -50,7 +50,7 @@ const RecipeCard = ({ recipe, className }) => (
           </div>
         </div>
         <h3 className="px-3 mt-1 text-lg">{recipe.name}</h3>
-        <span className="px-3 pb-3 text-sm text-gray-400">Proposé par <a href="#" className="text-gray-500">{recipe.user.username}</a></span>
+        {/* <span className="px-3 pb-3 text-sm text-gray-400">Proposé par <span className="text-gray-500">{recipe.user.username}</span></span> */}
       </div>
     </a>
   </Link>
@@ -58,12 +58,12 @@ const RecipeCard = ({ recipe, className }) => (
 
 export default function DailyRecipes({ title }) {
   return (
-    <section>
+    <section className="w-full">
       <div className="flex">
         <h2 className="flex-1 ml-6 my-8 text-3xl font-thin">{title}</h2>
         <a href="#" className="mt-12 mr-6 text-right">Parcourir</a>
       </div>
-      <div className="px-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="px-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {dailyRecipes.map((recipe, key) => <RecipeCard recipe={recipe} className={dailyRecipeHiddenPolicy(key)} key={key}></RecipeCard>)}
       </div>
     </section>

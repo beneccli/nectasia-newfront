@@ -7,9 +7,9 @@ export default function HomeHeader() {
     <div className="fixed z-50 w-full">
       <div className="container mx-auto flex flex-row">
         <h1 className="self-center px-6 my-2 text-2xl font-bold cursor-default">NECTASIA</h1>
-        <div className="w-full pr-6">
+        {/* <div className="w-full pr-6">
           <input className="hidden w-full py-1 px-4 my-2 border border-gray-300 rounded outline-none placeholder-gray-500 font-thin focus:shadow-sm focus:border-gray-400" placeholder="Rechercher une recette..." />
-        </div>
+        </div> */}
         <div className="flex">
           <Link href="/recipes">
             <a className="linkStyle">Parcourir les recettes</a>

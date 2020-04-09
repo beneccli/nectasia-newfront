@@ -4,12 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUtensilSpoon, faThumbtack } from '@fortawesome/free-solid-svg-icons'
 import { faThumbsUp, faThumbsDown, faComments } from '@fortawesome/free-regular-svg-icons'
 import RecipeDetail from '../../components/Recipes/RecipeDetail'
+import RecipeDetailV2 from '../../components/Recipes/RecipeDetailV2'
 import Link from '../../components/Link'
 
 const Recipe = () => {
   const router = useRouter()
   return (
-    <RecipeDetail slug={router.query.slug} />
+    // <RecipeDetail slug={router.query.slug} />
+    <RecipeDetailV2 slug={router.query.slug} />
   )
 }
 
