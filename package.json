@@ -17,6 +17,7 @@
     "autoprefixer": "^9.7.4",
     "next": "latest",
     "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-markdown": "^4.0.6",
@@ -25,6 +26,8 @@
   },
   "devDependencies": {
     "babel-plugin-root-import": "^6.4.1",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-flexbugs-fixes": "^4.2.0",
     "tailwindcss": "^1.2.0"
   }
 }
