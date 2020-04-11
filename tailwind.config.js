@@ -2,7 +2,12 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        '2/3': '66.666667%'
+        '1/4': '25%',
+        '1/3': '33.333333%',
+        '1/2': '50%',
+        '9/16': '56.25%',
+        '2/3': '66.666667%',
+        '3/4': '75%'
       },
       boxShadow: {
         'outline-gray': '0 0 0 3px #f7fafc',
@@ -34,7 +39,8 @@ module.exports = {
     borderColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover']
+    backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [
   ],

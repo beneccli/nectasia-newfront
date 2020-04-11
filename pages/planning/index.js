@@ -58,16 +58,19 @@ const dailyRecipeHiddenPolicy = (key) => (key == 2) ? 'hidden md:flex' : (key ==
 const RecipeCard = ({ recipe, className }) => (
   <Link href="/planning/dishSelection">
   {/* <Link href="/recipe/[slug]" as="/recipe/Slug-Test"> */}
-    <a>
-      <div className={`mx-3 mb-6 flex flex-col rounded cursor-pointer transition duration-200 shadow-outline-white hover:bg-gray-100 hover:shadow-outline-gray ${className}`}>
-        <div className="relative pb-2/3">
-          <img src={recipe.picture} className="absolute w-full h-full object-cover rounded-md" />
-        </div>
-        <div className="px-3 pt-2 flex">
-          <div className="flex-1 self-center text-xs text-gray-500 uppercase">{recipe.mealType}</div>
-        </div>
-        <h3 className="px-3 mt-1 text-lg">{recipe.name}</h3>
+    <a className={`animateCardPicture mx-3 mb-6 flex flex-col rounded cursor-pointer transition duration-200 shadow-outline-white hover:bg-gray-100 hover:shadow-outline-gray ${className}`}>
+      <div className="relative pb-2/3">
+        <img src={recipe.picture} className="absolute w-full h-full object-cover rounded-md" />
       </div>
+      <div className="px-3 pt-2 flex">
+        <div className="flex-1 self-center text-xs text-gray-500 uppercase">{recipe.mealType}</div>
+      </div>
+      <h3 className="px-3 mt-1 text-lg">{recipe.name}</h3>
+      <style jsx>{`
+        .animateCardPicture > div { @apply transform transition-transform duration-300 }
+        .animateCardPicture:hover > div:first-child { @apply scale-105 }
+        .animateCardPicture:active > div:first-child { @apply scale-95 duration-150 }
+      `}</style>
     </a>
   </Link>
 );
