@@ -14,28 +14,27 @@ const dailyRecipes = [
 const dailyRecipeHiddenPolicy = (key) => (key == 2) ? 'hidden md:flex' : (key == 3) ? 'hidden lg:flex' : '';
 
 const RecipeCard = ({ className, onClick, recipe, isSelected }) => (
-  <Link href="/recipe/[slug]" as="/recipe/Slug-Test">
-    <a onClick={onClick} className={`animateCardPicture block mx-3 mb-6 flex flex-col rounded cursor-pointer transition duration-200 shadow-outline-white hover:bg-gray-100 hover:shadow-outline-gray ${className}`}>
-      <div className="relative pb-2/3">
-        <img src={recipe.picture} className="absolute w-full h-full object-cover rounded-md" />
-        {isSelected && <span className="absolute px-2 py-4 rounded bg-black text-white text-center" style={{background: 'rgba(0,0,0,.75)', bottom: 0, right: 0, left: 0}}>Sélectionné</span>}
+  <a onClick={onClick} className={`animateCardPicture block mx-3 mb-6 flex flex-col rounded cursor-pointer transition duration-200 shadow-outline-white hover:bg-gray-100 hover:shadow-outline-gray ${className}`}>
+    <div className="relative pb-2/3">
+      <img src={recipe.picture} className="absolute w-full h-full object-cover rounded-md" />
+      {isSelected && <span className="absolute px-2 py-4 rounded bg-black text-white text-center" style={{background: 'rgba(0,0,0,.75)', bottom: 0, right: 0, left: 0}}>Sélectionné</span>}
+    </div>
+    <div className="px-3 pt-2 flex">
+      <div className="flex-1 self-center text-xs text-gray-500 uppercase">{recipe.category}</div>
+      <div className="flex-1 self-center text-right text-sm text-gray-500">
+        <FontAwesomeIcon icon={faThumbsUp} className="text-gray-400" />
+        <span className="pl-3">{recipe.likes}</span>
       </div>
-      <div className="px-3 pt-2 flex">
-        <div className="flex-1 self-center text-xs text-gray-500 uppercase">{recipe.category}</div>
-        <div className="flex-1 self-center text-right text-sm text-gray-500">
-          <FontAwesomeIcon icon={faThumbsUp} className="text-gray-400" />
-          <span className="pl-3">{recipe.likes}</span>
-        </div>
-      </div>
-      <h3 className="px-3 mt-1 text-lg">{recipe.name}</h3>
-      <style jsx>{`
-        .animateCardPicture > div { @apply transform transition-transform duration-300 }
-        .animateCardPicture:hover > div:first-child { @apply scale-105 }
-        .animateCardPicture:active > div:first-child { @apply scale-95 duration-150 }
-      `}</style>
-    </a>
-  </Link>
+    </div>
+    <h3 className="px-3 mt-1 text-lg">{recipe.name}</h3>
+    <style jsx>{`
+      .animateCardPicture > div { @apply transform transition-transform duration-300 }
+      .animateCardPicture:hover > div:first-child { @apply scale-105 }
+      .animateCardPicture:active > div:first-child { @apply scale-95 duration-150 }
+    `}</style>
+  </a>
 );
+// ! remove dishes buttons + center date + add all dishes above etc
 const RecipeCompleteCard = ({ recipe, className, isSelected }) => (
   <Link href="/recipe/[slug]" as="/recipe/Slug-Test">
     <a className={`mx-3 mb-6 flex flex-col rounded-lg cursor-pointer transition duration-200 shadow-outline-white bg-black! hover:shadow-outline-gray ${className}`}>
@@ -51,7 +50,7 @@ const RecipeCompleteCard = ({ recipe, className, isSelected }) => (
               <img src="/recipes/13.jpg" className="absolute w-full h-full object-cover" /></div>
           </div>
         </div>
-        {isSelected && <span className="absolute px-2 py-4 rounded bg-black text-white text-center" style={{background: 'rgba(0,0,0,.5)', bottom: 0, right: 0, left: 0}}>Sélectionné</span>}
+        {isSelected && <span className="absolute px-2 py-4 rounded bg-black text-white text-center" style={{background: 'rgba(0,0,0,.5)', bottom: 0, right: 0, left: 0}}>Petit déjeuner</span>}
       </div>
       <div className="px-3 pt-2 flex">
         <div className="flex-1 self-center text-xs text-gray-500 uppercase">{recipe.category}</div>

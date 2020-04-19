@@ -21,6 +21,11 @@ module.exports = {
         '72': '18rem',
         '84': '21rem',
         '96': '24rem'
+      },
+      borderRadius: {
+        'xl': '0.625rem',
+        '2xl': '0.75rem',
+        '3xl': '0.875rem'
       }
     },
     container: {

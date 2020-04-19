@@ -2,6 +2,7 @@ import Layout from '../../components/Layouts/MainLayout'
 import Link from '../../components/Link'
 import { getLayout } from '../../components/Layouts/MainLayout'
 import Calendar from '../../components/PlanningV2/Calendar'
+import CompleteDish from '../../components/Recipes/CompleteDish'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog, faChartBar, faShoppingCart, faUser, faMagic, faHistory, faFire } from '@fortawesome/free-solid-svg-icons'
 import plannedMeals from '../../data/plannedMeals.json'
@@ -97,7 +98,7 @@ const Planning = () => (
 
         {plannedDays.map((plannedDay, key) => 
         <div key={key}>
-          <div className="sticky flex pt-6 z-10 bg-white" style={{top: 52}}>
+          <div className="stickyy flex pt-6 z-10 bg-white" style={{top: 52}}>
 
             {/* <span className="font-thin relative">
               <button className="mt-1 mb-2 mr-4 px-6 py-1 border border-gray-300 bg-white rounded transition-colors duration-300 active:bg-gray-200">
@@ -141,7 +142,7 @@ const Planning = () => (
           {/* {!plannedDay.plannedMeals && <p className="my-6 text-gray-500 font-light">Pas de repas préparés.</p>} */}
           { plannedDay.plannedMeals && (
             <div className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {plannedMeals.map((recipe, key) => <RecipeCard recipe={recipe} className={dailyRecipeHiddenPolicy(key)} key={key}></RecipeCard>)}
+            {plannedMeals.map((recipe, key) => <CompleteDish recipe={recipe} className={dailyRecipeHiddenPolicy(key)} key={key}></CompleteDish>)}
             </div>
           )}
         </div>

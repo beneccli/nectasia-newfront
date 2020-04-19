@@ -16,7 +16,12 @@ export default function Header() {
         <div className="w-full pr-6 flex">
           <Link href="/planning" isActiveIfPathStartsWith>
             <a className="linkStyle">
-              <span>Plannification</span>
+              <span>Plannificateur</span>
+            </a>
+          </Link>
+          <Link href="/grocery" isActiveIfPathStartsWith>
+            <a className="linkStyle">
+              <span>Supermarché</span>
             </a>
           </Link>
           {/* <Link href="/recipes" isActiveIfPathStartsWith>
@@ -24,14 +29,14 @@ export default function Header() {
               <span>Recettes</span>
             </a>
           </Link> */}
-          <Link href="/commands" isActiveIfPathStartsWith>
+          <Link href="/planning?commands" isActiveIfPathStartsWith>
             <a className="linkStyle">
               <span>Commandes</span>
             </a>
           </Link>
         </div>
 
-        <Link href="/">
+        <Link href="/planning">
           <h1 className="self-center px-6 my-3 text-2xl font-bold cursor-pointer">NECTASIA</h1>
         </Link>
 
