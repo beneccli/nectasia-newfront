@@ -1,7 +1,7 @@
 import Header from '../Headers/Header'
 
 const contentStyle = {
-  paddingTop: 66
+  paddingTop: 60
 }
 
 const MainLayout = ({ children }) => (

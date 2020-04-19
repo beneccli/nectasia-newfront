@@ -6,7 +6,7 @@ import { faCog, faChartBar, faShoppingCart, faUser, faMagic, faHistory, faFire }
 const GrocerySidebar = () => (
   <div className="w-64 hidden md:block">
 
-    <div className="sticky" style={{top: 84}}>
+    <div className="sticky" style={{top: 0}}>
       <div className="flex flex-col">
 
         <div className="">
@@ -112,12 +112,18 @@ const RecipeCard = ({ recipe, className }) => (
 
 const Planning = () => (
   <div className="container">
+
+    <div className="mb-6 h-64 flex items-center justify-center bg-black text-white" style={{background: "url('/recipes/14.jpg')", backgroundSize: 'cover', backgroundPosition: 'center center'}}>
+      <span className="text-3xl uppercase font-bold">Supermarché</span>
+    </div>
+
     <div className="flex">
       <GrocerySidebar />
       <div className="flex-1 ml-8">
         <span className="font-sm italic">Products are displayed here as card</span>
       </div>
     </div>
+    
   </div>
 )
 
